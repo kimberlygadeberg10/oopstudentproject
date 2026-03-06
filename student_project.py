@@ -31,3 +31,24 @@ class Student:
     def grades_tuple(self):
         """Returns the grades as a tuple (immutable)."""
         return tuple(self.grades)
+    
+    # Step 2: Create student objects
+student1 = Student("Alice Johnson", "alice@example.com", [88, 92])
+student2 = Student("Bob Smith", "bob@example.com", [75, 85])
+student3 = Student("Charlie Brown", "charlie@example.com", [90, 95])
+
+# Add 2 new grades to each student
+student1.add_grade(94)
+student1.add_grade(87)
+
+student2.add_grade(82)
+student2.add_grade(78)
+
+student3.add_grade(88)
+student3.add_grade(91)
+
+# Display information and average grade for each student
+students = [student1, student2, student3]
+for student in students:
+    student.display_info()
+    print(f"Average Grade: {student.average_grade():.2f}\n")
