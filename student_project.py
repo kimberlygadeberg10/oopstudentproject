@@ -84,6 +84,16 @@ for student in students:
 print("\nUnique grades across all students:")
 print(unique_grades)
 
-# Test retrieving a student
-get_student_by_email("alice@example.com")
+# Step 4: Demonstrate tuple immutability
+
+for student in students:
+    grades_as_tuple = student.grades_tuple()
+
+    print(f"\nGrades as tuple for {student.name}: {grades_as_tuple}")
+
+    # Attempt to modify the tuple (this should fail)
+    try:
+        grades_as_tuple[0] = 100
+    except TypeError:
+        print("Tuples are immutable! You cannot change their values.")
 
