@@ -83,3 +83,7 @@ for student in students:
 
 print("\nUnique grades across all students:")
 print(unique_grades)
+
+# Test retrieving a student
+get_student_by_email("alice@example.com")
+
