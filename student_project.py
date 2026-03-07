@@ -97,3 +97,22 @@ for student in students:
     except TypeError:
         print("Tuples are immutable! You cannot change their values.")
 
+# Step 5: List operations with student grades
+
+for student in students:
+    print(f"\nUpdating grades for {student.name}")
+
+    # Remove the last grade from the list using pop()
+    removed_grade = student.grades.pop()
+    print(f"Removed last grade: {removed_grade}")
+
+    # Access and print the first and last grades
+    if student.grades:  # ensure the list is not empty
+        first_grade = student.grades[0]
+        last_grade = student.grades[-1]
+
+        print(f"First grade: {first_grade}")
+        print(f"Last grade: {last_grade}")
+
+    # Print the number of grades remaining
+    print(f"Total number of grades: {len(student.grades)}")
